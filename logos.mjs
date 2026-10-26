@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+const word='<path d="M0 0H37C62 0 75 15 75 40S62 80 37 80H0ZM19 18V62H35C49 62 56 54 56 40S49 18 35 18ZM87 0H107V61H153V80H87ZM165 0H206C228 0 239 10 239 27C239 40 232 48 222 51L244 80H219L199 54H185V80H165ZM185 17V37H204C214 37 219 34 219 27S214 17 204 17Z"/>';
+function svg(name,color,kind='horizontal'){
+let w=520,h=100,body='<g fill="'+color+'" transform="translate(0 5) scale(.96)">'+word+'</g><path d="M258 12V85" stroke="#d52a35" stroke-width="4"/><g fill="'+color+'" font-family="Arial, sans-serif" font-weight="700"><text x="282" y="40" font-size="19" letter-spacing="1">PLUMBING</text><text x="282" y="65" font-size="19" letter-spacing="1">SOLUTIONS INC.</text></g><text x="282" y="85" fill="'+color+'" font-family="Arial, sans-serif" font-size="10" letter-spacing=".4">HONEST SERVICE. FAIR PRICES.</text>';
+if(kind==='stacked'||kind==='square'){w=300;h=220;body='<g fill="'+color+'" transform="translate(28 20)">'+word+'</g><path d="M28 120H272" stroke="#d52a35" stroke-width="5"/><g fill="'+color+'" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700"><text x="150" y="154" font-size="20" letter-spacing="1">PLUMBING SOLUTIONS</text><text x="150" y="180" font-size="14" letter-spacing="6">INC.</text></g><text x="150" y="205" text-anchor="middle" fill="'+color+'" font-family="Arial, sans-serif" font-size="10">Honest Service. Fair Prices.</text>';}
+if(kind==='icon'){w=270;h=110;body='<g fill="'+color+'" transform="translate(13 7)">'+word+'</g><path d="M13 100H257" stroke="#d52a35" stroke-width="6"/>';}
+const xml='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'" viewBox="0 0 '+w+' '+h+'"><title>DLR Plumbing Solutions Inc.</title>'+body+'</svg>';fs.writeFileSync('dist/assets/'+name+'.svg',xml);
+}
+svg('logo-primary','#07182e');svg('logo-dark','#07182e');svg('logo-white','#ffffff');svg('logo-stacked','#07182e','stacked');svg('logo-square','#07182e','square');svg('logo-icon','#07182e','icon');svg('logo-mobile','#ffffff');svg('logo-favicon','#07182e','icon');
+

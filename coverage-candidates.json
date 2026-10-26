@@ -1,0 +1,65 @@
+{
+  "note": "Business approval required before publishing service claims or city pages beyond Menifee.",
+  "regions": {
+    "Southwest Riverside County": [
+      "Menifee",
+      "Murrieta",
+      "Temecula",
+      "Wildomar",
+      "Lake Elsinore",
+      "Canyon Lake",
+      "Winchester",
+      "French Valley",
+      "Perris",
+      "Hemet",
+      "San Jacinto",
+      "Homeland",
+      "Nuevo",
+      "Sun City"
+    ],
+    "Greater Riverside Area": [
+      "Riverside",
+      "Moreno Valley",
+      "Corona",
+      "Norco",
+      "Eastvale",
+      "Jurupa Valley",
+      "Woodcrest",
+      "Mead Valley",
+      "Grand Terrace"
+    ],
+    "Western Inland Empire": [
+      "Ontario",
+      "Rancho Cucamonga",
+      "Fontana",
+      "Upland",
+      "Chino",
+      "Chino Hills",
+      "Montclair",
+      "Rialto",
+      "Colton",
+      "San Bernardino",
+      "Redlands",
+      "Loma Linda",
+      "Yucaipa"
+    ],
+    "Expansion inquiries": [
+      "Fallbrook",
+      "Bonsall",
+      "Escondido",
+      "Vista",
+      "Oceanside",
+      "Carlsbad",
+      "San Marcos",
+      "Poway",
+      "Diamond Bar",
+      "Pomona",
+      "Claremont",
+      "La Verne",
+      "San Dimas",
+      "Banning",
+      "Beaumont",
+      "Calimesa"
+    ]
+  }
+}
