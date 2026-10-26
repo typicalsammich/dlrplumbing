@@ -1,0 +1,2 @@
+import sharp from 'file:///C:/Users/panse/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp/dist/index.mjs';
+const image=sharp('dist/assets/dlr-original-transparent.png');const stats=await image.stats();if(stats.isOpaque)throw Error('Logo is not transparent');console.log('Logo alpha verified: transparent pixels present.');await image.clone().resize({width:660}).webp({quality:93,alphaQuality:100}).toFile('dist/assets/dlr-original-transparent.webp');await image.clone().resize({width:256}).png().toFile('dist/assets/dlr-original-icon.png');

@@ -1,1 +1,10 @@
-{"name":"dlr-plumbing-solutions","private":true,"type":"module","scripts":{"build":"node build.mjs","check":"node check.mjs","dev":"node server.mjs"}}
+{
+  "name": "dlr-plumbing-solutions",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "check": "node check.mjs && node check-cinematic.mjs && node check-cinematic-mobile.mjs",
+    "dev": "node server.mjs"
+  }
+}

@@ -1,4 +1,4 @@
-import {CinematicEntrance} from './cinematic.js';
+import {CinematicEntrance} from './cinematic.js?v=mobile-logo-3';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const menu=$('.menu-toggle'),nav=$('#navigation');
 function closeMenu(){document.body.classList.remove('menu-open');menu?.setAttribute('aria-expanded','false');menu?.setAttribute('aria-label','Open navigation');}
@@ -61,5 +61,4 @@ b.addEventListener('click',()=>{opener=b;const content=dialog.querySelector('.pr
 }catch{}
 }
 projects();
-if($('#cinematic-root')){const entrance=new CinematicEntrance({root:$('#cinematic-root'),hero:$('#homepage-hero')});entrance.init();window.dlrEntrance=entrance;$('.replay-entrance')?.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'instant'});window.dlrEntrance.destroy();const replay=new CinematicEntrance({root:$('#cinematic-root'),hero:$('#homepage-hero'),force:true});window.dlrEntrance=replay;replay.init();});}
-
+if($('#cinematic-root')){const root=$('#cinematic-root'),hero=$('#homepage-hero');let config=null;try{config=JSON.parse($('#cinematic-config')?.textContent||'null');}catch{}const entrance=new CinematicEntrance({root,hero,config});window.dlrEntrance=entrance;entrance.init();$('.replay-entrance')?.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'instant'});if(window.dlrEntrance.playFromGesture())return;window.dlrEntrance.destroy();const replay=new CinematicEntrance({root,hero,config,force:true});window.dlrEntrance=replay;replay.init();});}
