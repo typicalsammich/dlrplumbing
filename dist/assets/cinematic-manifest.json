@@ -1,0 +1,24 @@
+{
+  "enabled": true,
+  "hasAudio": false,
+  "desktop": {
+    "sources": [
+      {
+        "src": "/assets/entrance-desktop.mp4",
+        "type": "video/mp4"
+      }
+    ],
+    "finalFrame": "/assets/hero-final-desktop.webp",
+    "objectPosition": "center"
+  },
+  "mobile": {
+    "sources": [
+      {
+        "src": "/assets/entrance-mobile.mp4",
+        "type": "video/mp4"
+      }
+    ],
+    "finalFrame": "/assets/hero-final-mobile.webp",
+    "objectPosition": "center"
+  }
+}
